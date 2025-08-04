@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace BussinessLayer.Abstract
 {
-    internal interface IOrderService : IGenericService<Order>
+    public interface IOrderService : IGenericService<Order>
     {
+        
+    
     }
 }

@@ -1,18 +1,20 @@
-﻿using BussinessLayer.Abstract;
-using EntityLayer.Concrete;
+﻿using DataAccessLayer.Repositories;
 using DataAccessLayer.Abstract;
+using EntityLayer.Concrete;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BussinessLayer.Concrete
+namespace DataAccessLayer.EntityFramework
 {
-    public class CategoryManager : ICategoryService
+    public class EFCategoryDal : GenericRepository, ICategoryDal
     {
+        // ICategoryDal'ın gerektirdiği üyeleri burada implemente edin
         private readonly ICategoryDal _categoryDal;
-        public CategoryManager(ICategoryDal categoryDal)
+        public EFCategoryDal(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
         }
@@ -23,22 +25,22 @@ namespace BussinessLayer.Concrete
 
         public List<Category> GetAll()
         {
-           return _categoryDal.GetAll();
+            return _categoryDal.GetAll();
         }
 
         public Category GetById(int id)
         {
-            return  _categoryDal.GetById(id);
+            return _categoryDal.GetById(id);
         }
 
         public void Insert(Category entity)
         {
-           _categoryDal.Insert(entity);
+            _categoryDal.Insert(entity);
         }
 
         public void Update(Category entity)
         {
-           _categoryDal.Update(entity);
+            _categoryDal.Update(entity);
         }
     }
 }

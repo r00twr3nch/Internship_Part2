@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BussinessLayer.Abstract
 {
-    public interface ICategoryService: IGenericService<Category>
-    {
+    public interface ICategoryService:IGenericService<Category>{
+
     }
 }

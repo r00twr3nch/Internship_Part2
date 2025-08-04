@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BussinessLayer
 {
-    internal interface ICustomerService : IGenericService<ICustomerService>
+    internal interface ICustomerService : Abstract.IGenericService<ICustomerService>
     {
         string customerName { get; }
         object CustomerName { get; }

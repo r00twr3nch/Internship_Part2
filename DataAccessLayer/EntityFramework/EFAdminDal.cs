@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.EntitiyFramework
+namespace DataAccessLayer.EntityFramework
 {
-    public class EFAdminDal:GenericRepository<Admin>, IAdminDal
+    public class EFAdminDal : GenericRepository
     {
 
     }

@@ -3,37 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer.Abstract;
+using EntityLayer.Concrete;
+
 
 namespace BussinessLayer.Concrete
 {
-    internal class CustomerManager : ICustomerService
+    public class CustomerManager : ICustomerDal
     {
+        private readonly ICustomerDal _customerDal;
+        public CustomerManager(ICustomerDal customerDal)
+        {
+            _customerDal = customerDal;
+        }
         public string customerName => throw new NotImplementedException();
 
         public object CustomerName => throw new NotImplementedException();
 
-        public void Delete(ICustomerService entity)
+        public void Delete(Customer entity)
         {
-            throw new NotImplementedException();
+            _customerDal.Delete(entity);
         }
 
-        public List<ICustomerService> GetAll()
+        public List<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            return _customerDal.GetAll();   
         }
 
-        public ICustomerService GetById(int id)
+        public Customer GetById(int id)
         {
-            throw new NotImplementedException();
+            return _customerDal.GetById(id);
         }
 
-        public void Insert(ICustomerService entity)
+        public void Insert(Customer entity)
         {
+            _customerDal.Insert(entity);
         }
 
-        public void Update(ICustomerService entity)
+
+        public void Update(Customer entity)
         {
-            throw new NotImplementedException();
+          _customerDal.Update(entity);
         }
     }
 }

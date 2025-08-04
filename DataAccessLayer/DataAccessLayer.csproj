@@ -53,6 +53,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -80,11 +81,11 @@
     <Compile Include="Abstract\IProductDal.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Context\InternshipContext.cs" />
-    <Compile Include="EntitiyFramework\EFAdminDal.cs" />
-    <Compile Include="EntitiyFramework\EFCategoryDal.cs" />
-    <Compile Include="EntitiyFramework\EFCustomerDal.cs" />
-    <Compile Include="EntitiyFramework\EFOrderDal.cs" />
-    <Compile Include="EntitiyFramework\EFProductDal.cs" />
+    <Compile Include="EntityFramework\EFAdminDal.cs" />
+    <Compile Include="EntityFramework\EFCategoryDal.cs" />
+    <Compile Include="EntityFramework\EFCustomerDal.cs" />
+    <Compile Include="EntityFramework\EFOrderDal.cs" />
+    <Compile Include="EntityFramework\EFProductDal.cs" />
     <Compile Include="Migrations\202507241243547_mig1.cs" />
     <Compile Include="Migrations\202507241243547_mig1.Designer.cs">
       <DependentUpon>202507241243547_mig1.cs</DependentUpon>
